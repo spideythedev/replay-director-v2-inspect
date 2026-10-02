@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:diamond_chestplate",
+            "item": {
+                "minecraft:diamond_chestplate": "query.is_owner_identifier_any('replay:actor')"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/models/armor/diamond_1"
+            },
+            "geometry": {
+                "default": "geometry.humanoid.armor.chestplate"
+            },
+            "scripts": {
+                "parent_setup": "v.chest_layer_visible = false;"
+            },
+            "render_controllers": [
+                "controller.render.replay_armor"
+            ]
+        }
+    }
+}

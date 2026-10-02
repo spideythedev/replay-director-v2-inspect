@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:golden_leggings",
+            "item": {
+                "minecraft:golden_leggings": "query.is_owner_identifier_any('replay:actor')"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/models/armor/gold_2"
+            },
+            "geometry": {
+                "default": "geometry.humanoid.armor.leggings"
+            },
+            "scripts": {
+                "parent_setup": "v.leg_layer_visible = false;"
+            },
+            "render_controllers": [
+                "controller.render.replay_armor"
+            ]
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "replay:actor",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "skin1": "textures/replay_skins/skin1",
+                "skin2": "textures/replay_skins/skin2",
+                "skin3": "textures/replay_skins/skin3",
+                "skin4": "textures/replay_skins/skin4",
+                "skin5": "textures/replay_skins/skin5",
+                "skin6": "textures/replay_skins/skin6",
+                "skin7": "textures/replay_skins/skin7",
+                "skin8": "textures/replay_skins/skin8",
+                "skin9": "textures/replay_skins/skin9",
+                "skin10": "textures/replay_skins/skin10",
+                "skin11": "textures/replay_skins/skin11",
+                "skin12": "textures/replay_skins/skin12",
+                "skin13": "textures/replay_skins/skin13",
+                "skin14": "textures/replay_skins/skin14",
+                "skin15": "textures/replay_skins/skin15"
+            },
+            "geometry": {
+                "default": "geometry.humanoid.custom"
+            },
+            "render_controllers": [
+                "controller.render.replay_actor"
+            ],
+            "enable_attachables": true,
+            "animations": {
+                "walk": "animation.replay_actor.walk",
+                "walk_controller": "controller.animation.replay_actor.walk",
+                "swing": "animation.replay_actor.swing",
+                "swing_controller": "controller.animation.replay_actor.swing",
+                "sneaking": "animation.player.sneaking",
+                "head_tracking": "animation.replay_actor.head_tracking",
+                "swing_sword": "animation.replay_actor.swing_sword",
+                "swing_axe": "animation.replay_actor.swing_axe",
+                "swing_pickaxe": "animation.replay_actor.swing_pickaxe",
+                "swing_mace": "animation.replay_actor.swing_mace",
+                "swing_trident": "animation.replay_actor.swing_trident",
+                "throw_trident": "animation.replay_actor.throw_trident",
+                "place_block": "animation.replay_actor.place_block",
+                "place_controller": "controller.animation.replay_actor.place",
+                "elytra_flying": "animation.replay_actor.elytra_flying",
+                "elytra_controller": "controller.animation.replay_actor.elytra"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "head_tracking": "!query.property('replay:dead')"
+                    },
+                    "walk_controller",
+                    "elytra_controller",
+                    "swing_controller",
+                    "place_controller",
+                    {
+                        "sneaking": "query.property('replay:sneaking') && !query.property('replay:dead')"
+                    }
+                ]
+            }
+        }
+    }
+}

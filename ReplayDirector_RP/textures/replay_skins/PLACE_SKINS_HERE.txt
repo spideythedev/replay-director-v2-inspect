@@ -1,0 +1,30 @@
+HOW TO ADD REPLAY ACTOR SKINS
+==============================
+
+Drop your skin PNGs directly into this folder:
+ReplayDirector_RP/textures/replay_skins/
+
+Name them exactly:
+  skin1.png
+  skin2.png
+  skin3.png
+  ...
+  skin15.png
+
+That's it - no other files need editing. All 15 slots (skin1 through
+skin15) are already fully wired into the replay actor entity, the render
+controller, and the in-game skin picker. Just paste a PNG with the right
+name and it's available next time you open Replay > Replay List >
+(select a replay) > Edit Replay > (select an actor) > Skin.
+
+- Standard 64x64 or 64x32 Minecraft skin layout.
+- You don't have to fill all 15 - only add as many as you actually have
+  art for (e.g. just skin1.png through skin5.png is fine).
+- To REPLACE a skin later, just overwrite the same-named PNG (e.g. paste
+  a new skin1.png over the old one) - no menu or code change needed,
+  actors using that slot will show the new art the next time they spawn.
+- The skin picker shows "Skin 1" through "Skin 15" as the display names,
+  matching the filename numbers.
+
+Skin selection is per replay actor, not global - each actor in each
+saved replay can use a different skin slot.

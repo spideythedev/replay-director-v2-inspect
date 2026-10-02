@@ -1,0 +1,154 @@
+{
+    "format_version": "1.21.110",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "replay:actor",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "replay:skin_index": {
+                    "type": "int",
+                    "range": [
+                        0,
+                        14
+                    ],
+                    "default": 0,
+                    "client_sync": true
+                },
+                "replay:moving": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:sprinting": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:sneaking": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:swimming": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:jumping": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:use_pulse": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:hurt_pulse": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:dead": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:item_pose": {
+                    "type": "enum",
+                    "values": [
+                        "none",
+                        "eating",
+                        "drinking",
+                        "bow",
+                        "crossbow",
+                        "trident",
+                        "shield"
+                    ],
+                    "default": "none",
+                    "client_sync": true
+                },
+                "replay:on_ground": {
+                    "type": "bool",
+                    "default": true,
+                    "client_sync": true
+                },
+                "replay:climbing": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:falling": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:landing_pulse": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:swing_type": {
+                    "type": "enum",
+                    "values": [
+                        "hand",
+                        "sword",
+                        "axe",
+                        "pickaxe",
+                        "mace",
+                        "trident"
+                    ],
+                    "default": "hand",
+                    "client_sync": true
+                },
+                "replay:place_pulse": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "replay:gliding": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "replay_actor"
+                ]
+            },
+            "minecraft:tick_world": {
+                "never_despawn": true,
+                "radius": 6
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:health": {
+                "value": 20,
+                "max": 20
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:nameable": {}
+        }
+    }
+}

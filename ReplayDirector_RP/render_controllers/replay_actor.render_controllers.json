@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.replay_actor": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.skin1",
+            "Texture.skin2",
+            "Texture.skin3",
+            "Texture.skin4",
+            "Texture.skin5",
+            "Texture.skin6",
+            "Texture.skin7",
+            "Texture.skin8",
+            "Texture.skin9",
+            "Texture.skin10",
+            "Texture.skin11",
+            "Texture.skin12",
+            "Texture.skin13",
+            "Texture.skin14",
+            "Texture.skin15"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.property('replay:skin_index')]"
+      ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "query.property('replay:hurt_pulse') ? 0.4 : 0.0"
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.replay_actor.walk": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "moving": "!query.property('replay:dead') && (query.property('replay:moving') || query.property('replay:climbing'))"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "moving": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || !(query.property('replay:moving') || query.property('replay:climbing'))"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    },
+    "controller.animation.replay_actor.swing": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "swinging_hand": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'hand'"
+            },
+            {
+              "swinging_sword": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'sword'"
+            },
+            {
+              "swinging_axe": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'axe'"
+            },
+            {
+              "swinging_pickaxe": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'pickaxe'"
+            },
+            {
+              "swinging_mace": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'mace'"
+            },
+            {
+              "swinging_trident": "!query.property('replay:dead') && query.property('replay:use_pulse') && query.property('replay:swing_type') == 'trident'"
+            }
+          ]
+        },
+        "swinging_hand": {
+          "animations": [
+            "swing"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        },
+        "swinging_sword": {
+          "animations": [
+            "swing_sword"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        },
+        "swinging_axe": {
+          "animations": [
+            "swing_axe"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        },
+        "swinging_pickaxe": {
+          "animations": [
+            "swing_pickaxe"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        },
+        "swinging_mace": {
+          "animations": [
+            "swing_mace"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        },
+        "swinging_trident": {
+          "animations": [
+            "swing_trident"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        }
+      }
+    },
+    "controller.animation.replay_actor.place": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "placing": "!query.property('replay:dead') && query.property('replay:place_pulse')"
+            }
+          ]
+        },
+        "placing": {
+          "animations": [
+            "place_block"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.05
+        }
+      }
+    },
+    "controller.animation.replay_actor.elytra": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "gliding": "!query.property('replay:dead') && query.property('replay:gliding')"
+            }
+          ],
+          "blend_transition": 0.15
+        },
+        "gliding": {
+          "animations": [
+            "elytra_flying"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('replay:dead') || !query.property('replay:gliding')"
+            }
+          ],
+          "blend_transition": 0.15
+        }
+      }
+    }
+  }
+}

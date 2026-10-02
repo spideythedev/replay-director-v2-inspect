@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:iron_boots",
+            "item": {
+                "minecraft:iron_boots": "query.is_owner_identifier_any('replay:actor')"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/models/armor/iron_1"
+            },
+            "geometry": {
+                "default": "geometry.humanoid.armor.boots"
+            },
+            "scripts": {
+                "parent_setup": "v.boot_layer_visible = false;"
+            },
+            "render_controllers": [
+                "controller.render.replay_armor"
+            ]
+        }
+    }
+}

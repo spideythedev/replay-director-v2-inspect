@@ -1,0 +1,38 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Replay Director V2 By Ash Blast",
+    "description": "A professional cinematic replay and camera toolkit for Minecraft creators.",
+    "uuid": "647fa489-d86f-4426-a1ab-eb6819bd9444",
+    "min_engine_version": [
+      1,
+      26,
+      10
+    ],
+    "version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f9f2b95f-ca38-445d-a391-80ac949e836e",
+      "version": [
+        1,
+        21,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "product_type": "addon",
+    "authors": [
+      "Ash Blast"
+    ]
+  },
+  "capabilities": [
+    "pbr"
+  ]
+}
